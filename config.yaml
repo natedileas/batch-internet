@@ -1,0 +1,10 @@
+folder: .
+database: db.sqlite
+template: reading_template.html
+index: reading_template.out.html
+urls:
+  - url: https://questionablecontent.net/view.php?comic=4378
+    name: qc
+pywebcopy_config:
+  load_javascript: True
+  over_write: True

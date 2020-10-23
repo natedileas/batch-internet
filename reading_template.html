@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<ul>
+		{% for date,url,path in users %}
+		  <li>date: <a href="{{ path }}">{{ url }}</a></li>
+		{% endfor %}
+		</ul>
+	</body>
+</html>
