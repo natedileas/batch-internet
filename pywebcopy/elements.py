@@ -145,7 +145,8 @@ class FileMixin(URLTransformer):
             with open(file_path, 'wb') as f:
                 #: Actual downloading
                 copyfileobj(req.raw, f)
-                f.write(self._watermark(url))
+                # ndileas 10/22/2020: remove watemark.
+                # f.write(self._watermark(url))
         except OSError:
             LOGGER.critical("Download failed for the file of "
                             "type %s to location %s" % (file_ext, file_path))

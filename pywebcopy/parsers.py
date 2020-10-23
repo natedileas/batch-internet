@@ -163,9 +163,10 @@ class Parser(object):
         self._tree = context_tree
         self.root = context_tree.getroot()
 
-        if self.root is not None:
-            # WaterMarking :)
-            self.root.insert(0, Comment(MARK.format('', __version__, utx.url, utc_now(), '')))
+        # ndileas, 10/22/2020: removed watermarking
+        # if self.root is not None:
+        #     # WaterMarking :)
+        #     self.root.insert(0, Comment(MARK.format('', __version__, utx.url, utc_now(), '')))
 
         # There are internal links present on the html page which are files
         # that includes `#` and `javascript:` and 'data:base64;` type links
